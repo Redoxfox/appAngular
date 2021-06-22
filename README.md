@@ -51,3 +51,24 @@ De la carpeta node_modules/jquery/dist/ "Clic derecho paht relative" cambiar por
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
+
+configuracion backend cors api C#
+
+  poner codigo siguiente: 
+  app.UseCors(option =>
+            {
+                option.WithOrigins("http://localhost:4200/");
+                option.AllowAnyMethod();
+                option.AllowAnyHeader();
+            });
+
+  dentro 
+  public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+  {
+  }
+
+   poner codigo siguiente: 
+   services.AddCors();
+   public void ConfigureServices(IServiceCollection services)
+   {
+   }

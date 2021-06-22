@@ -1,5 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { listweatherforecastI } from 'src/app/modelos/weatherforecast.intaface';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +14,7 @@ export class ApiService {
 
   cargarUsuarios (url:string ) {
   
-    return this.HttpClient.get(url);
+    return this.HttpClient.get<listweatherforecastI[]>(url);
 
   }
 
