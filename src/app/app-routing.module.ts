@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'',redirectTo:'login', pathMatch:'full'},
   //Agregar path de rutas
   {path:'login', component:LoginComponent},
-  {path:'editar', component:EditarComponent},
+  {path:'editar/:id', component:EditarComponent},
   {path:'dasboard', component:DasboardComponent},
   {path:'nuevo', component:NuevoComponent}
 

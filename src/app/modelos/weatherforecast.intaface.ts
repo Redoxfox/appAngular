@@ -3,5 +3,6 @@ export interface listweatherforecastI{
     summary:string;
     temperatureC:number;
     temperatureF:number;
+    id:number;
     
 }

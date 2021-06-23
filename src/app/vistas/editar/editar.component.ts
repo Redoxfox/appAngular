@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-editar',
   templateUrl: './editar.component.html',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private activaterouter:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
+    let elemento = this.activaterouter.snapshot.paramMap.get('id');
   }
 
 }

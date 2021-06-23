@@ -24,5 +24,12 @@ export class DasboardComponent implements OnInit {
       //console.log(data)
     });
   }
+  
+  EditarFila(id:number){
+    this.router.navigate(['editar', id]);
+  }
 
+  nuevoElemento(){
+    this.router.navigate(['nuevo']);
+  }
 }
