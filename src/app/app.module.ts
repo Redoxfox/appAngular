@@ -39,3 +39,35 @@ import { HttpClientModule} from '@angular/common/http';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+/*import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { DashboardComponent } from './vistas/dashboard/dashboard.component';
+import { LoginComponent } from './vistas/login/login.component';
+import { EditarComponent } from './vistas/editar/editar.component';
+import { NuevoComponent } from './vistas/nuevo/nuevo.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
+    DashboardComponent,
+    LoginComponent,
+    EditarComponent,
+    NuevoComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }*/
