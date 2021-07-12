@@ -14,7 +14,7 @@ export class EditarComponent implements OnInit {
   submitted = false;
   itemActivos=<tipoActivoPutI>{};
   id:number = 0 ;
-  valueNombreS:string ="";
+  
  
   constructor(private formB:FormBuilder, 
     private usuarioService:ApiService, 
@@ -30,18 +30,17 @@ export class EditarComponent implements OnInit {
   }
 
   
-  
- 
-  
-   
   ngOnInit(): void {
     
     this.id=Number(this.arouter.snapshot.params.id);
-    console.log(this.id, this.valueNombreS );
+    const url = `/api/Activos/${this.id}`;
+    this.usuarioService.getTipoActivosId(url)
+    .subscribe(data => {
+      this.updateTipoActivo.controls["nombre"].setValue(data.nombre);
+    }); 
   }
 
   updataTipoActivo(){
-    
     this.itemActivos= {
       id:this.id,
       nombre:this.updateTipoActivo.value.nombre
@@ -51,8 +50,7 @@ export class EditarComponent implements OnInit {
     .subscribe(data => {
       console.log(data);
       this.router.navigate(['dashboard']);
-    });
-    
+    }); 
   }
 
 }

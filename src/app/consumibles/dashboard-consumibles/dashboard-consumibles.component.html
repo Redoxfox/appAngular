@@ -14,13 +14,22 @@
     <div class="container mt-4" > 
       <div class="card">
           <div class="card-body">
-            <span class="h3">Lista Tipo Activos</span>
+            <span class="h3">Lista Activos</span>
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Nombre</th>
-                  <th scope="col">Codigo</th>
+                  <th scope="col">Modelo</th>
+                  <th scope="col">Serial</th>
+                  <th scope="col">Nro Activo</th>
+                  <th scope="col">Procesador</th>
+                  <th scope="col">Disco</th>
+                  <th scope="col">Color</th>
+                  <th scope="col">Nombre Equipo</th>
+                  <th scope="col">Asinado</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Id Tipo</th>
                   <th scope="col"></th>
                 </tr>
               </thead>
@@ -28,38 +37,27 @@
                 <tr *ngFor="let item of itemActivos; let indice=index" >
                   <td>{{indice + 1}}</td>
                   <td>{{item.nombre}}</td>
-                  <td scope="row">{{item.id}}</td>
+                  <td>{{item.modelo}}</td>
+                  <td>{{item.serial}}</td>
+                  <td>{{item.nroActivo}}</td>
+                  <td>{{item.procesador}}</td>
+                  <td>{{item.disco}}</td>
+                  <td>{{item.color}}</td>
+                  <td>{{item.nombreEquipo}}</td>
+                  <td>{{item.asignado}}</td>
+                  <td>{{item.estado}}</td>
+                  <td scope="row">{{item.idTipo}}</td>
                   <td>
                     <i class="fas fa-edit text-info " style="margin-right: 7px;" (click)="EditarFila(item.id)"></i>
-                    <i class="fas fa-trash-alt text-danger" (click)="deleteTipoActivosId(item.id)"></i>
+                    <i class="fas fa-trash-alt text-danger" (click)="deleteActivosId(item.id)"></i>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
       </div>
-    </div>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of weathers; let indice=index" (click)="EditarFila(item.id)">
-            <th scope="row">{{item.id}}</th>
-            <td>{{item.date}}</td>
-            <td>{{item.temperatureC}}</td>
-            <td>{{item.temperatureF}}</td>
-            <td>{{item.summary}}</td>
-            <td>{{indice + 1}}</td>
-          </tr>
-        </tbody>
-      </table>
-
-   
+    </div> 
 </body>
 </html>
+
+

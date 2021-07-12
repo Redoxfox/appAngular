@@ -12,19 +12,21 @@ import { entityTipoActivoI } from 'src/app/modelos/entityTipoActivo.inteface';
 export class DasboardComponent implements OnInit {
   weathers:tipoActivoI[] = [];
   itemActivos:entityTipoActivoI[] = [];
+  status:string = '';
+  errorMessage:string = '';
   constructor(private usuarioService:ApiService, private router:Router) { }
 
   ngOnInit(): void {
     /*this.usuarioService.cargarUsuarios('/weatherforecast')
     .subscribe(resp => {
       console.log(resp)
-    });*/
+    });
     
     this.usuarioService.cargarUsuarios('/weatherforecast') 
     .subscribe(data => {
       this.weathers = data;
       //console.log(data)
-    });
+    });*/
 
     this.usuarioService.getTipoActivos('/api/Activos')
     .subscribe(data => {
@@ -38,6 +40,21 @@ export class DasboardComponent implements OnInit {
 
   nuevoElemento(){
     this.router.navigate(['nuevo']);
+  }
+
+  deleteTipoActivosId(id:number){
+    const url = `/api/Activos/${id}`;
+    this.usuarioService.deleteTipoActivos(url)
+    .subscribe({
+          next: data => {
+            this.status = 'Delete successful';
+            this.ngOnInit();
+          },
+          error: error => {
+            this.errorMessage = error.message;
+            console.error('There was an error!', error);
+         }
+    });
   }
 }
 
