@@ -1,10 +1,11 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tipoActivoI } from 'src/app/modelos/tipoActivo.interface';
+import { entityTipoActivoCategoriaI, tipoActivoI } from 'src/app/modelos/tipoActivo.interface';
 import { entityTipoActivoI } from 'src/app/modelos/entityTipoActivo.inteface';
 import { tipoActivoPostI } from 'src/app/modelos/tipoActivoPost.interface';
 import { tipoActivoPutI } from 'src/app/modelos/tipoActivoPut.interface';
 import { entityActivoGetIdI, entityActivoI, entityActivoPostI, entityActivoPutI } from 'src/app/modelos/entityActivo.interface';
+import { entityConsumiblesGetI, entityConsumiblesGetIdI, entityConsumiblesPostI, entityConsumiblesPutI } from 'src/app/modelos/Consumibles.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -62,6 +63,54 @@ export class ApiService {
 
   deleteActivos(url:string){
     return this.HttpClient.delete(url);
+  }
+
+  //Metodos api consumibles
+
+  getConsumibles(url:string){
+    return this.HttpClient.get<entityConsumiblesGetI[]>(url);
+  }
+
+  getConsumiblesId(url:string){
+    return this.HttpClient.get<entityConsumiblesGetIdI>(url);
+  }
+
+  postConsumibles(url:string, entityCosumible:entityConsumiblesPostI){
+    return this.HttpClient.post(url,entityCosumible);
+  }
+
+  putConsumibles(url:string, entityCosumible:entityConsumiblesPutI){
+    return this.HttpClient.put(url,entityCosumible);
+  }
+
+  deleteConsumibles(url:string){
+    return this.HttpClient.delete(url);
+  }
+
+  //Metodos api usuarios
+
+  getUsuarios(url:string){
+    return this.HttpClient.get<entityConsumiblesGetI[]>(url);
+  }
+
+  getUsuariosId(url:string){
+    return this.HttpClient.get<entityConsumiblesGetIdI>(url);
+  }
+
+  postUsuarios(url:string, entityCosumible:entityConsumiblesPostI){
+    return this.HttpClient.post(url,entityCosumible);
+  }
+
+  putUsuarios(url:string, entityCosumible:entityConsumiblesPutI){
+    return this.HttpClient.put(url,entityCosumible);
+  }
+
+  deleteUsuarios(url:string){
+    return this.HttpClient.delete(url);
+  }
+
+  getCategoriaActivos(url:string){
+    return this.HttpClient.get<entityTipoActivoCategoriaI[]>(url);
   }
 
 }

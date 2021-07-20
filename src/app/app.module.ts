@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -37,6 +37,7 @@ import { DashboardConsumiblesComponent } from './consumibles/dashboard-consumibl
     HeaderComponent,
     FooterComponent,
     AppRoutingComponent,
+    
     /*DashboardPerifericosComponent,
     EditarPerifericosComponent,
     NuevoPerifericosComponent,
@@ -63,7 +64,8 @@ import { DashboardConsumiblesComponent } from './consumibles/dashboard-consumibl
     AppRoutingModule,
     ReactiveFormsModule, 
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

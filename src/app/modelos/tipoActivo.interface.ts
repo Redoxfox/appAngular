@@ -5,3 +5,8 @@ export interface tipoActivoI{
     temperatureF:number;
     id:number;
 }
+
+export interface entityTipoActivoCategoriaI{
+    id:number;
+    nombre:string;
+}

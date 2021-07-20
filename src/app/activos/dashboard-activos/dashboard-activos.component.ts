@@ -20,9 +20,10 @@ export class DashboardActivosComponent implements OnInit {
     
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
 
-    this.usuarioService.getActivos('/api/mActivos')
+  this.usuarioService.getActivos('/api/mActivos')
     .subscribe(data => {
       this.itemActivos = data;
     });

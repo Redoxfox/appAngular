@@ -52,6 +52,7 @@ export class EditarActivosComponent implements OnInit {
       this.updateActivo.controls["nombreEquipo"].setValue(data.nombreEquipo);
       this.updateActivo.controls["asignado"].setValue(data.asignado);
       this.updateActivo.controls["estado"].setValue(data.estado);
+      console.log(url);
     });
   }
 

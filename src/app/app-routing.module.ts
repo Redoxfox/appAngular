@@ -25,10 +25,10 @@ const routes: Routes = [
   {path:'editar/:id', component:EditarComponent},
   {path:'dashboard', component:DasboardComponent},
   {path:'nuevo', component:NuevoComponent},
-  {path:'dashboar_activos', component:DashboardActivosComponent},
+  {path:'dashboard_activos', component:DashboardActivosComponent},
   {path:'editar_activos/:id', component:EditarActivosComponent},
   {path:'nuevo_activos', component:NuevoActivosComponent},
-  {path:'dashboard_comsumibles', component:DashboardConsumiblesComponent},
+  {path:'dashboard_consumibles', component:DashboardConsumiblesComponent},
   {path:'editar_comsumibles/:id', component:EditarConsumiblesComponent},
   {path:'nuevo_comsumibles', component:NuevoConsumiblesComponent},
   {path:'dashboard_perifericos', component:DashboardPerifericosComponent},
@@ -49,7 +49,8 @@ export class AppRoutingModule { }
 export const AppRoutingComponent =[
   LoginComponent, EditarComponent, DasboardComponent,NuevoComponent,
   DashboardActivosComponent, EditarActivosComponent, NuevoActivosComponent,
-  DashboardConsumiblesComponent, EditarConsumiblesComponent, NuevoConsumiblesComponent
+  DashboardConsumiblesComponent, EditarConsumiblesComponent, NuevoConsumiblesComponent,
+  DashboardUsuariosComponent, EditarUsuariosComponent, NuevoUsuariosComponent
 ];
 
 
