@@ -1,8 +1,0 @@
-{
-    "/weatherforecast":{
-        "target":"https://localhost:44364",
-        "secure":false,
-        "logLevel":"debug",
-        "changeOrigin":true
-    }
-}
